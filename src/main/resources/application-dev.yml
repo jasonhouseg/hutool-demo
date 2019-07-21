@@ -1,0 +1,38 @@
+spring:
+  thymeleaf:
+    cache: false # Enable template caching.
+    check-template-location: true # Check that the templates location exists.
+    servlet:
+      content-type: text/html # Content-Type value.
+    enabled: true # Enable MVC Thymeleaf view resolution.
+    encoding: UTF-8 # Template encoding.
+    mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers.
+    prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+    suffix: .html # Suffix that gets appended to view names when building a URL.
+#redis
+  redis:
+    host: 47.52.192.78
+    port: 6379
+    database: 1
+awj:
+  cloud:
+#    baseUrl: http://192.168.1.226:9101 #liubin
+#    baseUrl: http://192.168.1.221:9101 #ping
+#    baseUrl: http://192.168.1.211:9101 #jh
+    baseUrl: http://localhost:9101
+taobao:
+  url1: https://oauth.taobao.com/authorize? #获取密钥url
+  url2: https://oauth.taobao.com/token? #登录授权url
+  response_type: code
+  client_id : 25134402
+  client_secret: 6621481cecc9a6951ee20b90ba1f68d6
+  grant_type : authorization_code
+  redirect_uri : http://zfg.tunnel.qydev.com/mobile/coupon/oauthResult
+  view : wap
+wx:
+  appId : wxaa53eb7eda9a3b1f
+  appSecret: 53f3a03994a3a9f86d12b9d3fc30588e
+  oauthUrl1: https://open.weixin.qq.com/connect/oauth2/authorize? #获取code
+  oauthUrl2: https://api.weixin.qq.com/sns/oauth2/access_token? #获取openid
+  redirectUrl: http://zfg.tunnel.qydev.com/qrCodePayWx
+

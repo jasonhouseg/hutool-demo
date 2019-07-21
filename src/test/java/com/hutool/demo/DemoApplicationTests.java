@@ -8,6 +8,8 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class DemoApplicationTests {
@@ -24,6 +26,13 @@ public class DemoApplicationTests {
         //当前日期字符串，格式：yyyy-MM-dd
         String today= DateUtil.today();
         System.out.println(today);
+        BigDecimal num = BigDecimal.valueOf(123);
+        System.out.println(num.setScale(2));
+
+        char[] words = "123456".toCharArray();
+        System.out.println(words[3]);
+        System.out.println("123456".substring(3, 4)+"地方的咖啡打开");
+
     }
 
 }

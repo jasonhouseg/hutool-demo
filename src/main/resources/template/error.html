@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)/mobile/index?m=article&a=detail&id=24&display=simple -->
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="错误">
+    <meta name="keywords" content="错误">
+      <link rel="shortcut icon" th:href="@{/img/favicon.ico}" href="http://awj.foryou-china.com/favicon.ico">
+    <title>错误</title>
+    <div th:include="common/header::header"></div>
+   </head>
+<body>
+
+<div class="con">
+    <div class="flow-done">
+        <div class="flow-done-con">
+            <img  src="/img/guanbi.png" width="90px">
+            <p th:if="${errorMsg!=null}" class="flow-done-title"  style="color: grey;margin-top: 20px" th:text="${errorMsg}"></p>
+            <p th:if="${errorMsg==null}" class="flow-done-title"  style="color: grey;margin-top: 20px"  >404 页面找不到了</p>
+
+
+        </div>
+    </div>
+    <div class="padding-all ect-button-more dis-box flow_done_btn">
+        <!--  -->
+    </div>
+</div>
+
+</body></html>
